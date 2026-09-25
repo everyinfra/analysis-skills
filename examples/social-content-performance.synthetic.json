@@ -1,0 +1,308 @@
+{
+  "source_response": {
+    "platform": "tiktok",
+    "action": "search",
+    "count": 3,
+    "id": "SYNTH-REQ-0002",
+    "results": [
+      {
+        "id": "SYNTH-POST-01",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-01",
+        "text": "Three lid hacks that keep my bottle from leaking in a packed backpack #waterbottle #packhacks",
+        "author_name": "Trail Sampler",
+        "author_username": "synth_trail",
+        "like_count": 40,
+        "comment_count": 5,
+        "share_count": 5,
+        "view_count": 1000,
+        "posted_at": "2026-09-20T10:00:00Z",
+        "platform": "tiktok"
+      },
+      {
+        "id": "SYNTH-POST-02",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-02",
+        "text": "Is a 32 oz bottle too much for a desk job? A week of testing sizes #hydration #desksetup",
+        "author_name": "Office Sips",
+        "author_username": "synth_office",
+        "like_count": 40,
+        "comment_count": 4,
+        "share_count": 6,
+        "view_count": 2000,
+        "posted_at": "2026-09-21T09:00:00Z",
+        "platform": "tiktok"
+      },
+      {
+        "id": "SYNTH-POST-03",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-03",
+        "text": "Bottle drop",
+        "author_name": "Quiet Clip",
+        "author_username": "synth_quiet",
+        "like_count": 0,
+        "share_count": 0,
+        "view_count": 0,
+        "posted_at": "2026-09-22T18:00:00Z",
+        "platform": "tiktok"
+      }
+    ]
+  },
+  "task": {
+    "goal": "Understand early engagement patterns for water-bottle content and propose next topics.",
+    "sample_scope": "3 synthetic posts captured 2026-09-24T00:00:00Z; posted 2026-09-20 to 2026-09-22.",
+    "comparison_limits": "Posts were published on different days by different authors; view counts are not age-normalized.",
+    "content_goal": "Identify themes from post text that the account could test next.",
+    "metric_definition": "Engagement rate = (likes + comments + shares) / views, for each post and pooled over eligible posts.",
+    "output_language": "en"
+  },
+  "expected_output": {
+    "sample_and_window": {
+      "sample_size": 3,
+      "capture_time": "2026-09-24T00:00:00Z",
+      "posted_range": "2026-09-20T10:00:00Z to 2026-09-22T18:00:00Z",
+      "window_note": "Single snapshot; no trend claims.",
+      "sampling_method": "TikTok search results supplied by the user; selection and ranking method unknown; not a random sample."
+    },
+    "returned_records": [
+      {
+        "id": "SYNTH-POST-01",
+        "platform": "tiktok",
+        "action": "search",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-01",
+        "author_name": "Trail Sampler",
+        "author_username": "synth_trail",
+        "posted_at": "2026-09-20T10:00:00Z",
+        "metrics_present": [
+          "view_count",
+          "like_count",
+          "comment_count",
+          "share_count"
+        ],
+        "metrics_not_returned": []
+      },
+      {
+        "id": "SYNTH-POST-02",
+        "platform": "tiktok",
+        "action": "search",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-02",
+        "author_name": "Office Sips",
+        "author_username": "synth_office",
+        "posted_at": "2026-09-21T09:00:00Z",
+        "metrics_present": [
+          "view_count",
+          "like_count",
+          "comment_count",
+          "share_count"
+        ],
+        "metrics_not_returned": []
+      },
+      {
+        "id": "SYNTH-POST-03",
+        "platform": "tiktok",
+        "action": "search",
+        "url": "https://example.invalid/@synth/video/SYNTH-POST-03",
+        "author_name": "Quiet Clip",
+        "author_username": "synth_quiet",
+        "posted_at": "2026-09-22T18:00:00Z",
+        "metrics_present": [
+          "view_count",
+          "like_count",
+          "share_count"
+        ],
+        "metrics_not_returned": [
+          "comment_count"
+        ]
+      }
+    ],
+    "raw_counts": {
+      "per_post": {
+        "SYNTH-POST-01": {
+          "view_count": 1000,
+          "like_count": 40,
+          "comment_count": 5,
+          "share_count": 5
+        },
+        "SYNTH-POST-02": {
+          "view_count": 2000,
+          "like_count": 40,
+          "comment_count": 4,
+          "share_count": 6
+        },
+        "SYNTH-POST-03": {
+          "view_count": 0,
+          "like_count": 0,
+          "share_count": 0,
+          "not_returned": [
+            "comment_count"
+          ]
+        }
+      },
+      "sums": [
+        {
+          "metric": "view_count",
+          "value": 3000,
+          "posts": [
+            "SYNTH-POST-01",
+            "SYNTH-POST-02",
+            "SYNTH-POST-03"
+          ]
+        },
+        {
+          "metric": "like_count",
+          "value": 80,
+          "posts": [
+            "SYNTH-POST-01",
+            "SYNTH-POST-02",
+            "SYNTH-POST-03"
+          ]
+        },
+        {
+          "metric": "share_count",
+          "value": 11,
+          "posts": [
+            "SYNTH-POST-01",
+            "SYNTH-POST-02",
+            "SYNTH-POST-03"
+          ]
+        },
+        {
+          "metric": "comment_count",
+          "value": 9,
+          "posts": [
+            "SYNTH-POST-01",
+            "SYNTH-POST-02"
+          ],
+          "note": "SYNTH-POST-03 did not return comment_count."
+        }
+      ]
+    },
+    "rates": [
+      {
+        "name": "engagement_rate_SYNTH-POST-01",
+        "formula": "(like_count + comment_count + share_count) / view_count = (40+5+5)/1000",
+        "denominator": "view_count",
+        "used_rows": 1,
+        "excluded_rows": 0,
+        "value": 0.05,
+        "percent": "5.0%"
+      },
+      {
+        "name": "engagement_rate_SYNTH-POST-02",
+        "formula": "(like_count + comment_count + share_count) / view_count = (40+4+6)/2000",
+        "denominator": "view_count",
+        "used_rows": 1,
+        "excluded_rows": 0,
+        "value": 0.025,
+        "percent": "2.5%"
+      },
+      {
+        "name": "engagement_rate_SYNTH-POST-03",
+        "value": null,
+        "status": "unavailable",
+        "reason": "view_count is 0 (zero denominator) and comment_count was not returned."
+      },
+      {
+        "name": "pooled_engagement_rate",
+        "formula": "sum(like_count + comment_count + share_count) / sum(view_count) over the same eligible posts = (40+5+5+40+4+6)/(1000+2000) = 100/3000",
+        "denominator": "view_count summed over used posts",
+        "used_rows": 2,
+        "used_ids": [
+          "SYNTH-POST-01",
+          "SYNTH-POST-02"
+        ],
+        "excluded_rows": 1,
+        "excluded_ids": [
+          "SYNTH-POST-03"
+        ],
+        "exclusion_reason": "zero denominator (view_count 0) and comment_count not returned",
+        "value": 0.0333,
+        "percent": "3.33% (rounded; exactly 1/30)",
+        "note": "Not the unweighted mean of the post rates (3.75%)."
+      }
+    ],
+    "missing_data": {
+      "by_record": {
+        "SYNTH-POST-03": {
+          "comment_count": "not returned (field absent); not treated as 0"
+        }
+      },
+      "returned_zeros": "SYNTH-POST-03 view_count, like_count, and share_count are returned zeros.",
+      "not_returned_for_any_record": [
+        "per-record capture time (only the task capture time)",
+        "follower counts",
+        "video duration or format",
+        "separate caption and tag fields (hashtags appear inside text)"
+      ],
+      "times": "posted_at was returned for all three posts."
+    },
+    "comparability": {
+      "shared": "All three are TikTok posts from the same search action with the same metric set, except that SYNTH-POST-03 lacks comment_count.",
+      "post_age_at_capture": {
+        "SYNTH-POST-01": "86 h (about 3.6 days)",
+        "SYNTH-POST-02": "63 h (about 2.6 days)",
+        "SYNTH-POST-03": "30 h (1.25 days)"
+      },
+      "valid_with_caveats": "SYNTH-POST-01 vs SYNTH-POST-02 engagement rates (5.0% vs 2.5%), keeping the age and author differences in view.",
+      "invalid_comparisons": [
+        "Raw view counts across posts: ages differ and views are not age-normalized.",
+        "Any rate comparison involving SYNTH-POST-03: its rate is unavailable.",
+        "Author-level conclusions: each author has a single post.",
+        "Trends over time: single snapshot."
+      ]
+    },
+    "content_patterns": [
+      {
+        "theme": "practical fix for a leak problem",
+        "post_ids": [
+          "SYNTH-POST-01"
+        ],
+        "evidence": "\"Three lid hacks that keep my bottle from leaking in a packed backpack\"",
+        "observed_performance": "5.0% engagement rate on 1000 views; the higher rate of the two computable posts.",
+        "caveat": "One post; the oldest in the sample."
+      },
+      {
+        "theme": "bottle-size question for a daily setting",
+        "post_ids": [
+          "SYNTH-POST-02"
+        ],
+        "evidence": "\"Is a 32 oz bottle too much for a desk job? A week of testing sizes\"",
+        "observed_performance": "2.5% engagement rate; 2000 views, the most in the sample although about a day younger than SYNTH-POST-01.",
+        "caveat": "One post; question format and a different author."
+      },
+      {
+        "theme": "ambiguous two-word text",
+        "post_ids": [
+          "SYNTH-POST-03"
+        ],
+        "evidence": "\"Bottle drop\"",
+        "observed_performance": "0 views, 0 likes, and 0 shares returned; comment_count not returned; rate unavailable.",
+        "caveat": "The text is too short to tell what the video shows; youngest post (30 h at capture)."
+      }
+    ],
+    "next_topics": [
+      {
+        "hypothesis": "Problem-solution clips with a concrete fix may earn more engagement per view than open sizing questions.",
+        "supporting_ids": [
+          "SYNTH-POST-01",
+          "SYNTH-POST-02"
+        ],
+        "test_idea": "Publish one fix-style clip and one sizing-question clip from the same account in the same week; compare engagement rates at the same post age.",
+        "uncertainty": "Two posts with different authors and ages; not causal."
+      },
+      {
+        "hypothesis": "Bottle-size questions tied to a daily setting may reach more viewers, even at a lower engagement rate.",
+        "supporting_ids": [
+          "SYNTH-POST-02"
+        ],
+        "test_idea": "Post two setting-based sizing clips (for example desk and gym) and compare views at equal age.",
+        "uncertainty": "One post; reach also depends on distribution that the caption does not explain."
+      },
+      {
+        "hypothesis": "A descriptive caption may help early distribution compared with a two-word caption.",
+        "supporting_ids": [
+          "SYNTH-POST-03"
+        ],
+        "test_idea": "Re-check SYNTH-POST-03 at a later capture, then post comparable footage with a descriptive caption and compare at equal age.",
+        "uncertainty": "The zero views may reflect timing or distribution rather than the caption; the video content is unknown."
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "EveryInfra Analysis Skills",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "maintainer": {"organization": "EveryInfra"},
+  "feedback_url": "https://github.com/everyinfra/analysis-skills/issues",
+  "skills": [
+    {
+      "slug": "ecommerce-product-analysis",
+      "skill_path": "skills/ecommerce-product-analysis/SKILL.md",
+      "example_path": "examples/ecommerce-product-analysis.synthetic.json"
+    },
+    {
+      "slug": "social-content-performance",
+      "skill_path": "skills/social-content-performance/SKILL.md",
+      "example_path": "examples/social-content-performance.synthetic.json"
+    },
+    {
+      "slug": "content-analysis-tagging",
+      "skill_path": "skills/content-analysis-tagging/SKILL.md",
+      "example_path": "examples/content-analysis-tagging.synthetic.json"
+    }
+  ]
+}

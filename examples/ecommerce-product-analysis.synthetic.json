@@ -1,0 +1,256 @@
+{
+  "source_response": {
+    "platform": "amazon",
+    "action": "search",
+    "count": 3,
+    "id": "SYNTH-REQ-0001",
+    "results": [
+      {
+        "asin": "SYNTH00001",
+        "title": "AquaForge Summit 32 oz Stainless Water Bottle, Leak-Proof Lid",
+        "url": "https://example.invalid/dp/SYNTH00001",
+        "brand": "AquaForge",
+        "price": 24,
+        "currency": "USD",
+        "rating": 4.5,
+        "rating_scale": 5,
+        "rating_count": 120,
+        "in_stock": true,
+        "features": [
+          "Double-wall vacuum insulation",
+          "Fits standard cup holders"
+        ],
+        "platform": "amazon"
+      },
+      {
+        "asin": "SYNTH00002",
+        "title": "Cascade Peak Trail Bottle 750 ml, Powder-Coated Finish",
+        "url": "https://example.invalid/dp/SYNTH00002",
+        "brand": "Cascade Peak",
+        "price": 30,
+        "currency": "USD",
+        "rating": 4.8,
+        "rating_scale": 5,
+        "rating_count": 30,
+        "in_stock": true,
+        "features": [
+          "Includes straw lid",
+          "Dishwasher safe"
+        ],
+        "platform": "amazon"
+      },
+      {
+        "asin": "SYNTH00003",
+        "title": "Northline Daily Bottle 24 oz, Basic Grip",
+        "url": "https://example.invalid/dp/SYNTH00003",
+        "brand": "Northline",
+        "currency": "USD",
+        "rating_count": 0,
+        "in_stock": false,
+        "platform": "amazon"
+      }
+    ]
+  },
+  "task": {
+    "goal": "Compare the three water-bottle candidates for a US retail launch and produce a shortlist.",
+    "market": "United States",
+    "budget_note": "Retail budget ceiling 28 USD per unit; retail prices are not procurement costs.",
+    "criteria": {
+      "retail_price_max_usd": 28,
+      "must_be_in_stock": true
+    },
+    "captured_at": "2026-09-24T00:00:00Z",
+    "output_language": "en",
+    "known_limits": [
+      "Weight, SKU dimensions, shipping, tax, and supplier cost are not returned by this search action.",
+      "Rating counts differ widely between candidates; treat rating comparisons with that caveat."
+    ]
+  },
+  "expected_output": {
+    "observations": {
+      "period": "Single snapshot captured 2026-09-24T00:00:00Z (task.captured_at); no trend.",
+      "grouping_keys": "Same platform (amazon), action (search), market (United States, from task), currency (USD), and capture time. Capacity differs on every row and comes from title text only, so each capacity is its own group.",
+      "groups": [
+        {
+          "group": "32 oz (from title)",
+          "rows": [
+            {
+              "asin": "SYNTH00001",
+              "title": "AquaForge Summit 32 oz Stainless Water Bottle, Leak-Proof Lid",
+              "url": "https://example.invalid/dp/SYNTH00001",
+              "brand": "AquaForge",
+              "price": 24,
+              "currency": "USD",
+              "rating": 4.5,
+              "rating_scale": 5,
+              "rating_count": 120,
+              "in_stock": true,
+              "features": [
+                "Double-wall vacuum insulation",
+                "Fits standard cup holders"
+              ],
+              "platform": "amazon"
+            }
+          ]
+        },
+        {
+          "group": "750 ml (from title)",
+          "rows": [
+            {
+              "asin": "SYNTH00002",
+              "title": "Cascade Peak Trail Bottle 750 ml, Powder-Coated Finish",
+              "url": "https://example.invalid/dp/SYNTH00002",
+              "brand": "Cascade Peak",
+              "price": 30,
+              "currency": "USD",
+              "rating": 4.8,
+              "rating_scale": 5,
+              "rating_count": 30,
+              "in_stock": true,
+              "features": [
+                "Includes straw lid",
+                "Dishwasher safe"
+              ],
+              "platform": "amazon"
+            }
+          ]
+        },
+        {
+          "group": "24 oz (from title)",
+          "rows": [
+            {
+              "asin": "SYNTH00003",
+              "title": "Northline Daily Bottle 24 oz, Basic Grip",
+              "url": "https://example.invalid/dp/SYNTH00003",
+              "brand": "Northline",
+              "currency": "USD",
+              "rating_count": 0,
+              "in_stock": false,
+              "platform": "amazon",
+              "not_returned": [
+                "price",
+                "rating",
+                "rating_scale",
+                "features"
+              ]
+            }
+          ]
+        }
+      ],
+      "cohort_note": "No two rows share a capacity, so there is no within-group price or rating comparison. Capacities are title text, not a structured size field; no oz/ml conversion or per-unit price is used."
+    },
+    "calculations": [
+      {
+        "name": "budget_check_SYNTH00001",
+        "formula": "28 - 24",
+        "comparison": "24 <= 28",
+        "result": "within ceiling",
+        "value": 4,
+        "unit": "USD headroom"
+      },
+      {
+        "name": "budget_check_SYNTH00002",
+        "formula": "30 - 28",
+        "comparison": "30 > 28",
+        "result": "exceeds ceiling",
+        "value": 2,
+        "unit": "USD over ceiling"
+      },
+      {
+        "name": "budget_check_SYNTH00003",
+        "value": null,
+        "result": "not evaluable",
+        "reason": "price not returned"
+      },
+      {
+        "name": "in_stock_count",
+        "formula": "count(in_stock = true)",
+        "value": 2,
+        "unit": "rows of 3",
+        "ids": [
+          "SYNTH00001",
+          "SYNTH00002"
+        ],
+        "note": "SYNTH00003 returned in_stock=false; no row is missing in_stock."
+      },
+      {
+        "name": "listed_price_difference_SYNTH00002_minus_SYNTH00001",
+        "formula": "30 - 24",
+        "value": 6,
+        "unit": "USD",
+        "note": "Listed prices of different capacities (750 ml vs 32 oz, from titles); not a per-unit or same-SKU difference."
+      },
+      {
+        "name": "rating_count_ratio_SYNTH00001_to_SYNTH00002",
+        "formula": "120 / 30",
+        "value": 4,
+        "unit": "ratio",
+        "note": "SYNTH00001's rating base is 4x SYNTH00002's. Rating counts are not sales volume."
+      },
+      {
+        "name": "rows_with_rating",
+        "formula": "count(rating returned)",
+        "value": 2,
+        "unit": "rows of 3",
+        "ids": [
+          "SYNTH00001",
+          "SYNTH00002"
+        ],
+        "exclusions": "SYNTH00003: rating not returned; its rating_count is a returned 0.",
+        "note": "No rating average across groups: each row is a different capacity group."
+      }
+    ],
+    "interpretation": [
+      "Only SYNTH00001 passes both stated filters: its 24 USD listed price is within the 28 USD ceiling (24 <= 28) and it is in stock.",
+      "SYNTH00002 is in stock but exceeds the ceiling by 2 USD (30 > 28). Its 4.8/5 rating comes from 30 ratings, against 4.5/5 from 120 ratings for SYNTH00001 (a 4x larger base), and it is a different capacity, so the rating gap is weak evidence of better quality.",
+      "SYNTH00003 is out of stock and returned no price or rating. Its rating_count of 0 means no ratings were counted, not a low score, and it cannot be checked against the price ceiling.",
+      "The titles state three different capacities (32 oz, 750 ml, 24 oz). Capacity is title text rather than a structured field, so no size-adjusted value comparison is made.",
+      "Listed retail prices are not procurement costs; nothing here supports margin, sales, or demand claims."
+    ],
+    "missing_values": {
+      "not_returned_by_row": {
+        "SYNTH00003": [
+          "price",
+          "rating",
+          "rating_scale",
+          "features"
+        ]
+      },
+      "not_returned_for_any_row": [
+        "seller",
+        "rank",
+        "structured capacity or unit field",
+        "per-row capture time (only task.captured_at)",
+        "weight",
+        "SKU dimensions",
+        "shipping cost",
+        "tax",
+        "supplier cost"
+      ],
+      "null_vs_zero": "SYNTH00003 rating_count is a returned 0; its price, rating, rating_scale, and features were not returned. Neither is treated as a zero price or a zero rating.",
+      "decision_criteria_missing": [
+        "required capacity",
+        "procurement cost and margin target",
+        "minimum rating or rating count",
+        "required features"
+      ]
+    },
+    "recommendations": {
+      "shortlist": [
+        "SYNTH00001"
+      ],
+      "rationale": "The only row meeting both stated criteria (listed price <= 28 USD and in stock).",
+      "tradeoffs": [
+        "SYNTH00002: in stock and rated 4.8/5 on 30 ratings, but 2 USD over the ceiling and a different capacity (750 ml).",
+        "SYNTH00003: 24 oz, but out of stock with no returned price or rating."
+      ],
+      "conditional": "If the ceiling rises to at least 30 USD, SYNTH00002 also passes the filters. If a specific capacity is required, the shortlist changes: 32 oz keeps SYNTH00001; 750 ml leaves only SYNTH00002, which is over the current ceiling; 24 oz leaves only SYNTH00003, which needs a returned price and stock first.",
+      "next_information_needed": [
+        "SYNTH00003 price, rating, and restock status",
+        "required capacity",
+        "procurement cost, shipping, and tax for any margin decision",
+        "structured size or variant data"
+      ]
+    }
+  }
+}

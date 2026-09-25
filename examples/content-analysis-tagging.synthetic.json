@@ -1,0 +1,121 @@
+{
+  "source_response": {
+    "platform": "xiaohongshu",
+    "action": "search",
+    "count": 3,
+    "id": "SYNTH-REQ-0003",
+    "results": [
+      {
+        "id": "SYNTH-NOTE-01",
+        "url": "https://example.invalid/explore/SYNTH-NOTE-01",
+        "title": "Deep-clean your water bottle in 6 steps",
+        "text": "Step-by-step: drop baking soda in, swirl with hot water, scrub the lid ring, rinse, air dry upside down, repeat weekly.",
+        "platform": "xiaohongshu"
+      },
+      {
+        "id": "SYNTH-NOTE-02",
+        "url": "https://example.invalid/explore/SYNTH-NOTE-02",
+        "title": "One week with the Summit bottle",
+        "text": "Used it every day for a week at the gym and the office: insulation held, no leaks in my bag, but the mouthpiece stains with coffee.",
+        "platform": "xiaohongshu"
+      },
+      {
+        "id": "SYNTH-NOTE-03",
+        "url": "https://example.invalid/explore/SYNTH-NOTE-03",
+        "title": "Bottle",
+        "text": "Saw this at the store.",
+        "platform": "xiaohongshu"
+      }
+    ]
+  },
+  "task": {
+    "mode": "analyze",
+    "taxonomy": {
+      "tutorial": "Content that teaches a repeatable procedure with explicit steps.",
+      "review": "Content reporting first-hand usage experience over time, positive or negative."
+    },
+    "goal": "Label each record against the taxonomy and summarize themes for a product-research team.",
+    "output_language": "en"
+  },
+  "expected_output": {
+    "records": [
+      {
+        "id": "SYNTH-NOTE-01",
+        "status": "labeled",
+        "labels": [
+          "tutorial"
+        ],
+        "evidence": [
+          {
+            "field": "title",
+            "quote": "Deep-clean your water bottle in 6 steps"
+          },
+          {
+            "field": "text",
+            "quote": "Step-by-step: drop baking soda in, swirl with hot water, scrub the lid ring, rinse, air dry upside down, repeat weekly."
+          }
+        ],
+        "confidence": "high",
+        "needs_review": false
+      },
+      {
+        "id": "SYNTH-NOTE-02",
+        "status": "labeled",
+        "labels": [
+          "review"
+        ],
+        "evidence": [
+          {
+            "field": "title",
+            "quote": "One week with the Summit bottle"
+          },
+          {
+            "field": "text",
+            "quote": "Used it every day for a week at the gym and the office: insulation held, no leaks in my bag, but the mouthpiece stains with coffee."
+          }
+        ],
+        "confidence": "high",
+        "needs_review": false
+      },
+      {
+        "id": "SYNTH-NOTE-03",
+        "status": "unknown",
+        "labels": [],
+        "evidence": [
+          {
+            "field": "text",
+            "quote": "Saw this at the store."
+          }
+        ],
+        "confidence": "low",
+        "needs_review": true
+      }
+    ],
+    "summary": {
+      "label_counts": {
+        "tutorial": 1,
+        "review": 1
+      },
+      "unresolved_ids": [
+        "SYNTH-NOTE-03"
+      ],
+      "themes": [
+        {
+          "theme": "step-by-step bottle cleaning routine",
+          "ids": [
+            "SYNTH-NOTE-01"
+          ],
+          "count": 1
+        },
+        {
+          "theme": "week-long use with a mixed verdict (insulation held and no leaks, but coffee stains the mouthpiece)",
+          "ids": [
+            "SYNTH-NOTE-02"
+          ],
+          "count": 1
+        }
+      ],
+      "limitations": "Three synthetic records from one search. Each theme appears in only one record, so none is a recurring pattern. SYNTH-NOTE-03 (\"Saw this at the store.\") is too short to label or theme and needs review."
+    }
+  }
+}
