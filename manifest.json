@@ -1,6 +1,6 @@
 {
   "name": "EveryInfra Analysis Skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "Apache-2.0",
   "maintainer": {"organization": "EveryInfra"},
   "feedback_url": "https://github.com/everyinfra/analysis-skills/issues",
@@ -19,6 +19,11 @@
       "slug": "content-analysis-tagging",
       "skill_path": "skills/content-analysis-tagging/SKILL.md",
       "example_path": "examples/content-analysis-tagging.synthetic.json"
+    },
+    {
+      "slug": "review-insights",
+      "skill_path": "skills/review-insights/SKILL.md",
+      "example_path": "examples/review-insights.synthetic.json"
     }
   ]
 }

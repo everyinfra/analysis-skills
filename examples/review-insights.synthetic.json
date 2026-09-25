@@ -1,0 +1,394 @@
+{
+  "source_response": {
+    "platform": "amazon",
+    "action": "reviews",
+    "count": 8,
+    "id": "SYNTH-REQ-0004",
+    "results": [
+      {
+        "review_id": "SYNTH-REV-001",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-001",
+        "title": "Ice lasts all day",
+        "text": "Filled it with ice at 7am and there was still ice at 6pm in a hot car. Fits my cup holder too.",
+        "rating": 5,
+        "rating_scale": 5,
+        "posted_at": "2026-08-02T15:20:00Z",
+        "variant": "Color: Slate",
+        "helpful_count": 12,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 1",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-002",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-002",
+        "title": "Lid started leaking",
+        "text": "Great for the first month, then the lid started leaking around the rim. Water ends up in my bag.",
+        "rating": 2,
+        "rating_scale": 5,
+        "posted_at": "2026-08-20T09:05:00Z",
+        "variant": "Color: Slate",
+        "helpful_count": 8,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 2",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-003",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-003",
+        "title": "Cold drinks, heavy bottle",
+        "text": "Keeps water cold for hours. It is heavier than I expected when full.",
+        "rating": 4,
+        "rating_scale": 5,
+        "posted_at": "2026-08-25T18:40:00Z",
+        "variant": "Color: Sand",
+        "helpful_count": 3,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 3",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-004",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-004",
+        "title": "Arrived dented",
+        "text": "The box was crushed and the bottle arrived with a dent near the base.",
+        "rating": 1,
+        "rating_scale": 5,
+        "posted_at": "2026-09-01T12:00:00Z",
+        "variant": "Color: Sand",
+        "helpful_count": 0,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 4",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-005",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-005",
+        "title": "Cup holder friendly",
+        "text": "Slim enough for my car's cup holder and the handle feels sturdy.",
+        "rating": 5,
+        "rating_scale": 5,
+        "posted_at": "2026-09-05T07:30:00Z",
+        "variant": "Color: Slate",
+        "is_verified_purchase": false,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 5",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-006",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-006",
+        "title": "Leaks when tipped over",
+        "text": "If it tips over in my backpack the lid leaks a little. Keeps coffee hot though.",
+        "rating": 2,
+        "rating_scale": 5,
+        "posted_at": "2026-09-10T21:15:00Z",
+        "variant": "Color: Sand",
+        "helpful_count": 5,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 6",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-007",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-007",
+        "title": "ok",
+        "text": "ok",
+        "rating": 3,
+        "rating_scale": 5,
+        "posted_at": "2026-09-12T10:10:00Z",
+        "variant": "Color: Slate",
+        "helpful_count": 0,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 7",
+        "platform": "amazon"
+      },
+      {
+        "review_id": "SYNTH-REV-008",
+        "product_asin": "SYNTH00001",
+        "url": "https://example.invalid/review/SYNTH-REV-008",
+        "title": "Still cold after the gym",
+        "text": "Two workouts later and the water is still cold. The paint has not chipped yet.",
+        "rating": 5,
+        "rating_scale": 5,
+        "posted_at": "2026-09-18T19:45:00Z",
+        "helpful_count": 1,
+        "is_verified_purchase": true,
+        "is_vine": false,
+        "country": "United States",
+        "author_name": "Synthetic Reviewer 8",
+        "platform": "amazon"
+      }
+    ]
+  },
+  "task": {
+    "goal": "Find the main pain points and praise in recent reviews of SYNTH00001 before a reorder decision.",
+    "reviewed_item": {
+      "asin": "SYNTH00001",
+      "title": "AquaForge Summit 32 oz Stainless Water Bottle, Leak-Proof Lid",
+      "listing_rating": 4.5,
+      "listing_rating_count": 120
+    },
+    "sample_note": "The 8 most recent reviews returned by one reviews call for amazon.com; not a random sample.",
+    "captured_at": "2026-09-24T00:00:00Z",
+    "output_language": "en"
+  },
+  "expected_output": {
+    "sample": {
+      "review_count": 8,
+      "platform": "amazon",
+      "action": "reviews",
+      "reviewed_item": "SYNTH00001 (all 8 reviews)",
+      "posted_range": "2026-08-02T15:20:00Z to 2026-09-18T19:45:00Z",
+      "capture_time": "2026-09-24T00:00:00Z",
+      "selection": "The 8 most recent reviews from one call (per task); not a random sample of the 120 listing ratings.",
+      "fields_returned": [
+        "review_id",
+        "product_asin",
+        "url",
+        "title",
+        "text",
+        "rating",
+        "rating_scale",
+        "posted_at",
+        "variant",
+        "helpful_count",
+        "is_verified_purchase",
+        "is_vine",
+        "country",
+        "author_name",
+        "platform"
+      ],
+      "fields_missing_by_review": {
+        "SYNTH-REV-005": [
+          "helpful_count"
+        ],
+        "SYNTH-REV-008": [
+          "variant"
+        ]
+      }
+    },
+    "rating_distribution": {
+      "scale": 5,
+      "counts": {
+        "5": 3,
+        "4": 1,
+        "3": 1,
+        "2": 2,
+        "1": 1
+      },
+      "ids_by_rating": {
+        "5": [
+          "SYNTH-REV-001",
+          "SYNTH-REV-005",
+          "SYNTH-REV-008"
+        ],
+        "4": [
+          "SYNTH-REV-003"
+        ],
+        "3": [
+          "SYNTH-REV-007"
+        ],
+        "2": [
+          "SYNTH-REV-002",
+          "SYNTH-REV-006"
+        ],
+        "1": [
+          "SYNTH-REV-004"
+        ]
+      },
+      "rated": 8,
+      "unrated": 0,
+      "sample_mean": {
+        "formula": "(5+2+4+1+5+2+3+5)/8 = 27/8",
+        "value": 3.375,
+        "n": 8
+      },
+      "note": "Mean of the 8 most recent reviews only. The listing shows 4.5 from 120 ratings; the gap reflects which reviews were sampled and is not evidence of a rating decline."
+    },
+    "pain_points": [
+      {
+        "theme": "lid leaks after some use or when tipped over",
+        "type": "product",
+        "review_ids": [
+          "SYNTH-REV-002",
+          "SYNTH-REV-006"
+        ],
+        "count": 2,
+        "share_of_reviews_with_text": "2/8 (25%)",
+        "quotes": [
+          "\"the lid started leaking around the rim\"",
+          "\"the lid leaks a little\""
+        ],
+        "ratings": [
+          2,
+          2
+        ],
+        "variant_notes": "Reported on Slate (002) and Sand (006), so not tied to one color in this sample.",
+        "time_notes": "002 says the leak started after the first month; 006 describes leaking when tipped over in a backpack."
+      },
+      {
+        "theme": "arrived damaged (crushed box, dented base)",
+        "type": "delivery or packaging, not in-use performance",
+        "review_ids": [
+          "SYNTH-REV-004"
+        ],
+        "count": 1,
+        "share_of_reviews_with_text": "1/8 (12.5%)",
+        "quotes": [
+          "\"The box was crushed and the bottle arrived with a dent near the base.\""
+        ],
+        "ratings": [
+          1
+        ]
+      },
+      {
+        "theme": "heavier than expected when full",
+        "type": "expectation",
+        "review_ids": [
+          "SYNTH-REV-003"
+        ],
+        "count": 1,
+        "share_of_reviews_with_text": "1/8 (12.5%)",
+        "quotes": [
+          "\"It is heavier than I expected when full.\""
+        ],
+        "ratings": [
+          4
+        ]
+      }
+    ],
+    "praise": [
+      {
+        "theme": "keeps drinks cold or hot for hours",
+        "review_ids": [
+          "SYNTH-REV-001",
+          "SYNTH-REV-003",
+          "SYNTH-REV-006",
+          "SYNTH-REV-008"
+        ],
+        "count": 4,
+        "share_of_reviews_with_text": "4/8 (50%)",
+        "quotes": [
+          "\"there was still ice at 6pm in a hot car\"",
+          "\"Keeps coffee hot though.\""
+        ],
+        "ratings": [
+          5,
+          4,
+          2,
+          5
+        ],
+        "notes": "Includes the mixed reviews 003 and 006."
+      },
+      {
+        "theme": "fits car cup holders",
+        "review_ids": [
+          "SYNTH-REV-001",
+          "SYNTH-REV-005"
+        ],
+        "count": 2,
+        "share_of_reviews_with_text": "2/8 (25%)",
+        "quotes": [
+          "\"Fits my cup holder too.\"",
+          "\"Slim enough for my car's cup holder\""
+        ],
+        "ratings": [
+          5,
+          5
+        ],
+        "notes": "005 is not a verified purchase."
+      },
+      {
+        "theme": "sturdy handle",
+        "review_ids": [
+          "SYNTH-REV-005"
+        ],
+        "count": 1,
+        "share_of_reviews_with_text": "1/8 (12.5%)",
+        "quotes": [
+          "\"the handle feels sturdy\""
+        ],
+        "ratings": [
+          5
+        ]
+      }
+    ],
+    "unclassified_and_data_gaps": {
+      "unclassified": [
+        {
+          "review_id": "SYNTH-REV-007",
+          "reason": "Title and text are only \"ok\"; no specific statement."
+        }
+      ],
+      "not_complaints": "SYNTH-REV-008 says \"The paint has not chipped yet\"; that is not a paint-chipping complaint.",
+      "missing_fields": {
+        "SYNTH-REV-005": "helpful_count not returned (not 0)",
+        "SYNTH-REV-008": "variant not returned"
+      },
+      "zero_vs_missing": "SYNTH-REV-004 and SYNTH-REV-007 returned helpful_count 0; SYNTH-REV-005 returned no helpful_count.",
+      "verification": "SYNTH-REV-005 is_verified_purchase is false; kept and flagged.",
+      "selection_bias": "Most-recent sample of 8 from a listing with 120 ratings; shares describe these reviews only, not all buyers.",
+      "small_cohorts": "Each theme rests on 1 to 4 reviews. Variant cohorts: Slate 4, Sand 3, variant not returned 1."
+    },
+    "actions_to_test": [
+      {
+        "hypothesis": "The lid seal may loosen after weeks of use or leak when the bottle lies on its side, which conflicts with the \"Leak-Proof Lid\" title claim.",
+        "supporting_ids": [
+          "SYNTH-REV-002",
+          "SYNTH-REV-006"
+        ],
+        "check": "Test lid seals on both colors after repeated use and in a tipped position; review returns or support contacts that mention leaks; confirm the claim wording before reordering.",
+        "uncertainty": "Two reviews in a recent sample of 8; not a measured defect rate."
+      },
+      {
+        "hypothesis": "Packaging may not protect the bottle in transit.",
+        "supporting_ids": [
+          "SYNTH-REV-004"
+        ],
+        "check": "Check damage-in-transit records for recent shipments and the outer box specification.",
+        "uncertainty": "One review; could be a single carrier incident."
+      },
+      {
+        "hypothesis": "Stating the filled weight could reduce weight surprises.",
+        "supporting_ids": [
+          "SYNTH-REV-003"
+        ],
+        "check": "Add the filled weight to the listing and watch later reviews for weight mentions.",
+        "uncertainty": "One review, rated 4 stars."
+      },
+      {
+        "hypothesis": "Temperature retention and cup-holder fit are the most repeated praise and could lead the listing copy.",
+        "supporting_ids": [
+          "SYNTH-REV-001",
+          "SYNTH-REV-003",
+          "SYNTH-REV-005",
+          "SYNTH-REV-006",
+          "SYNTH-REV-008"
+        ],
+        "check": "Compare listing copy that leads with these points against the current copy.",
+        "uncertainty": "Praise from a small recent sample; not measured satisfaction."
+      }
+    ]
+  }
+}

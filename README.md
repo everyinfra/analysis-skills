@@ -4,7 +4,7 @@
 
 **Free to download. Use your own AI tool and model.**
 
-EveryInfra Analysis Skills is version `0.1.0`, licensed under Apache-2.0. The package is free to download and install. It ships three analysis Skills. It does not call a model, does not bundle a model provider, and has no API key or runtime dependency. The customer's compatible AI tool supplies the model and the model quota.
+EveryInfra Analysis Skills is version `0.2.0`, licensed under Apache-2.0. The package is free to download and install. It ships four analysis Skills. It does not call a model, does not bundle a model provider, and has no API key or runtime dependency. The customer's compatible AI tool supplies the model and the model quota.
 
 A separate EveryInfra data-collection API or MCP call may cost money. Free Skill installation is not free collection.
 
@@ -15,6 +15,7 @@ A separate EveryInfra data-collection API or MCP call may cost money. Free Skill
 | `ecommerce-product-analysis` | Product candidates from user-supplied CSV/JSON or results already fetched. |
 | `social-content-performance` | Social content for a stated sample and time window, from supplied files or results already fetched. |
 | `content-analysis-tagging` | Records labeled with a user-provided or agreed taxonomy. |
+| `review-insights` | Pain points, praise, and rating patterns in product, app, place, or company reviews, from supplied files or results already fetched. |
 
 Each Skill analyzes supplied files or already-fetched results. Installing a Skill does not collect data.
 
@@ -27,6 +28,7 @@ Each Skill also works on results you already fetched from EveryInfra. Examples o
 | `ecommerce-product-analysis` | `amazon/search`, `walmart/search`, `taobao/search`, `jd/search`, `shopee/search` |
 | `social-content-performance` | `tiktok/search`, `tiktok/user_videos`, `youtube/search`, `xiaohongshu/search`, `bilibili/search` |
 | `content-analysis-tagging` | Text records such as `xiaohongshu/search`, `reddit/search`, `zhihu/search`, or `comments` results |
+| `review-insights` | `amazon/reviews`, `walmart/reviews`, `taobao/reviews`, `jd/reviews`, `app_store/reviews`, `google_maps_reviews/reviews` |
 
 Live catalog: `GET https://api.everyinfra.com/api/v1/social/catalog`.
 
@@ -60,12 +62,13 @@ Copy one or more of these exact Skill folders into `~/.agents/skills/` or `~/.cl
 - `skills/ecommerce-product-analysis`
 - `skills/social-content-performance`
 - `skills/content-analysis-tagging`
+- `skills/review-insights`
 
 Each Skill folder is independently installable. Compatible hosts can use their own documented Skill folder.
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging`
+Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging`
+Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 For a synthetic example, give the model only `source_response` and `task`; retain `expected_output` outside the model input to compare afterward.
 
@@ -73,11 +76,12 @@ For a synthetic example, give the model only `source_response` and `task`; retai
 
 ## Synthetic fixtures
 
-The `examples/` directory contains three synthetic fixtures, one per Skill. They are synthetic:
+The `examples/` directory contains four synthetic fixtures, one per Skill. They are synthetic:
 
 - `examples/ecommerce-product-analysis.synthetic.json`
 - `examples/social-content-performance.synthetic.json`
 - `examples/content-analysis-tagging.synthetic.json`
+- `examples/review-insights.synthetic.json`
 
 Open the matching fixture and give the Skill the fixture's `source_response` and task. Each fixture includes `expected_output`. Compare the returned structure, not exact model wording. Using a fixture makes no EveryInfra data-collection call.
 

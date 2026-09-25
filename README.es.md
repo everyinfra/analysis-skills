@@ -4,7 +4,7 @@
 
 **Descarga gratuita. Usa tu propia herramienta de IA y tu propio modelo.**
 
-EveryInfra Analysis Skills es la versión `0.1.0`, con licencia Apache-2.0. El paquete se puede descargar e instalar de forma gratuita. Incluye tres Skills de análisis. No llama a un modelo, no incluye un proveedor de modelos y no requiere una clave de API ni dependencias en tiempo de ejecución. La herramienta de IA compatible del cliente proporciona el modelo y la cuota del modelo.
+EveryInfra Analysis Skills es la versión `0.2.0`, con licencia Apache-2.0. El paquete se puede descargar e instalar de forma gratuita. Incluye cuatro Skills de análisis. No llama a un modelo, no incluye un proveedor de modelos y no requiere una clave de API ni dependencias en tiempo de ejecución. La herramienta de IA compatible del cliente proporciona el modelo y la cuota del modelo.
 
 Una llamada aparte a la API o MCP de recopilación de datos de EveryInfra puede generar cargos. La instalación gratuita de Skills no es una recopilación gratuita.
 
@@ -15,6 +15,7 @@ Una llamada aparte a la API o MCP de recopilación de datos de EveryInfra puede 
 | `ecommerce-product-analysis` | Candidatos de producto a partir de CSV/JSON proporcionados por el usuario o de resultados ya obtenidos. |
 | `social-content-performance` | Contenido social para una muestra y una ventana temporal indicadas, a partir de archivos proporcionados o de resultados ya obtenidos. |
 | `content-analysis-tagging` | Registros etiquetados con una taxonomía proporcionada por el usuario o acordada. |
+| `review-insights` | Problemas, elogios y patrones de calificación en reseñas de productos, apps, lugares o empresas, a partir de archivos proporcionados o de resultados ya obtenidos. |
 
 Cada Skill analiza archivos proporcionados o resultados ya obtenidos. Instalar un Skill no recopila datos.
 
@@ -27,6 +28,7 @@ Cada Skill también analiza resultados que ya obtuviste de EveryInfra. Ejemplos 
 | `ecommerce-product-analysis` | `amazon/search`, `walmart/search`, `taobao/search`, `jd/search`, `shopee/search` |
 | `social-content-performance` | `tiktok/search`, `tiktok/user_videos`, `youtube/search`, `xiaohongshu/search`, `bilibili/search` |
 | `content-analysis-tagging` | Registros de texto, por ejemplo `xiaohongshu/search`, `reddit/search`, `zhihu/search` o resultados `comments` |
+| `review-insights` | `amazon/reviews`, `walmart/reviews`, `taobao/reviews`, `jd/reviews`, `app_store/reviews`, `google_maps_reviews/reviews` |
 
 Catálogo en vivo: `GET https://api.everyinfra.com/api/v1/social/catalog`.
 
@@ -60,12 +62,13 @@ Copia una o más de estas carpetas de Skill exactas en `~/.agents/skills/` o `~/
 - `skills/ecommerce-product-analysis`
 - `skills/social-content-performance`
 - `skills/content-analysis-tagging`
+- `skills/review-insights`
 
 Cada carpeta de Skill se puede instalar de forma independiente. Los hosts compatibles pueden usar la carpeta de Skill indicada en su documentación.
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging`
+Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging`
+Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 Para un ejemplo sintético, proporciona al modelo solo `source_response` y `task`; mantén `expected_output` fuera de la entrada del modelo para compararlo después.
 
@@ -73,11 +76,12 @@ Para un ejemplo sintético, proporciona al modelo solo `source_response` y `task
 
 ## Fixtures sintéticos
 
-El directorio `examples/` contiene tres fixtures sintéticos, uno por Skill. Son sintéticos:
+El directorio `examples/` contiene cuatro fixtures sintéticos, uno por Skill. Son sintéticos:
 
 - `examples/ecommerce-product-analysis.synthetic.json`
 - `examples/social-content-performance.synthetic.json`
 - `examples/content-analysis-tagging.synthetic.json`
+- `examples/review-insights.synthetic.json`
 
 Abre el fixture correspondiente y entrega al Skill el `source_response` y la tarea del fixture. Cada fixture incluye `expected_output`. Compara la estructura devuelta, no la redacción exacta del modelo. Usar un fixture no realiza ninguna llamada de recopilación de datos de EveryInfra.
 

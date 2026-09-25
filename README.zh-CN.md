@@ -4,7 +4,7 @@
 
 **免费下载，用你自己的 AI 工具和模型。**
 
-EveryInfra Analysis Skills 的版本为 `0.1.0`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附三个分析 Skill。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额由客户的兼容 AI 工具提供。
+EveryInfra Analysis Skills 的版本为 `0.2.0`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附四个分析 Skill。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额由客户的兼容 AI 工具提供。
 
 单独的 EveryInfra 数据采集 API 或 MCP 调用可能产生费用。免费安装 Skill 并不等于免费采集。
 
@@ -15,6 +15,7 @@ EveryInfra Analysis Skills 的版本为 `0.1.0`，采用 Apache-2.0 许可协议
 | `ecommerce-product-analysis` | 产品候选，来自用户提供的 CSV/JSON 或已获取的结果。 |
 | `social-content-performance` | 指定样本和时间窗口内的社交内容表现分析，来自所提供的文件或已获取的结果。 |
 | `content-analysis-tagging` | 使用用户提供或已约定的分类体系标注的记录。 |
+| `review-insights` | 商品、应用、门店或公司评价中的痛点、好评点和评分分布，来自所提供的文件或已获取的结果。 |
 
 每个 Skill 分析所提供的文件或已获取的结果。安装 Skill 不会采集数据。
 
@@ -27,6 +28,7 @@ EveryInfra Analysis Skills 的版本为 `0.1.0`，采用 Apache-2.0 许可协议
 | `ecommerce-product-analysis` | `amazon/search`、`walmart/search`、`taobao/search`、`jd/search`、`shopee/search` |
 | `social-content-performance` | `tiktok/search`、`tiktok/user_videos`、`youtube/search`、`xiaohongshu/search`、`bilibili/search` |
 | `content-analysis-tagging` | 文本类记录，例如 `xiaohongshu/search`、`reddit/search`、`zhihu/search` 或各平台的 `comments` 结果 |
+| `review-insights` | `amazon/reviews`、`walmart/reviews`、`taobao/reviews`、`jd/reviews`、`app_store/reviews`、`google_maps_reviews/reviews` |
 
 实时目录：`GET https://api.everyinfra.com/api/v1/social/catalog`。
 
@@ -60,12 +62,13 @@ EveryInfra Analysis Skills 的版本为 `0.1.0`，采用 Apache-2.0 许可协议
 - `skills/ecommerce-product-analysis`
 - `skills/social-content-performance`
 - `skills/content-analysis-tagging`
+- `skills/review-insights`
 
 每个 Skill 文件夹均可独立安装。兼容宿主可以使用其文档中说明的 Skill 文件夹。
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging`
+Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging`
+Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 对于合成示例，只向模型提供 `source_response` 和 `task`；保留 `expected_output` 在模型输入之外以便之后比较。
 
@@ -73,11 +76,12 @@ Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `
 
 ## 合成示例
 
-`examples/` 目录包含三个合成示例，每个 Skill 各一份。它们是合成的：
+`examples/` 目录包含四个合成示例，每个 Skill 各一份。它们是合成的：
 
 - `examples/ecommerce-product-analysis.synthetic.json`
 - `examples/social-content-performance.synthetic.json`
 - `examples/content-analysis-tagging.synthetic.json`
+- `examples/review-insights.synthetic.json`
 
 打开对应示例，将示例中的 `source_response` 和任务交给 Skill。每个示例都包含 `expected_output`。比较返回的结构，不要比对模型的具体措辞。使用示例不会发起 EveryInfra 数据采集调用。
 
