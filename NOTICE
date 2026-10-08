@@ -1,0 +1,19 @@
+EveryInfra Analysis Skills
+Copyright 2026 EveryInfra
+
+Apache License 2.0 (see LICENSE). Reference notes were written by EveryInfra;
+framework points borrowed from open-source projects are summary + link only:
+
+- anthropics/skills (MIT): xlsx recalc gate, validation loops, gotchas style
+- tronghieu/agent-skills (open): data-scientist directory pattern, statistics discipline
+- gaasher/Agent-Loop-Skills (open): hypothesis ledger, verification gates
+- retentioneering/retentioneering-tools (open): incident-derived denominator/survivorship rules
+- fafa-ai-data-lab/ai-data-analyst-agent (open): metric provenance footer tiers
+- TerryFYL/claude-statistical-analysis-skill (open): diagnose-before-analyze, APA output
+- social-media-skills/skills (open): METER framework, never-fabricate rules
+- AgriciDaniel/claude-youtube (open): channel-size stratified benchmarks
+- MaartenGr/BERTopic, songyouwei/ABSA-PyTorch, yangheng95/ABSADatasets, Meituan-Dianping/asap, cjhutto/vaderSentiment (open): topic/aspect method choices and schemas
+- nexscope-ai/eCommerce-Skills (open): tiered pricing template, feasibility dimensions
+- BernhardWenzel/google-taxonomy-matcher (open): taxonomy normalization
+- HumanSignal/label-studio, cleanlab/cleanlab, refuel-ai/autolabel, argilla-io/argilla, huggingface/setfit (open): labeling calibration stack
+- Benchmarks cited with source+year: Rival IQ 2025, Socialinsider 2026; statistics guidance: BBC/Pew/MeasuringU/REFORMS/AAAI-26; failure-mode evidence: arXiv 2506.23719 (DABstep), 2306.05836 (CORR2CAUSE), 2508.09716 (misleading charts), ACM 3805712.3809882

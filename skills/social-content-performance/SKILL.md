@@ -68,3 +68,7 @@ Themes from supplied text/caption/tags, each with post IDs, short evidence, obse
 ### Next topics
 
 Hypotheses with supporting IDs, a test idea, and uncertainty. No promised growth.
+
+## References
+
+- [references/metrics-and-benchmarks.md](references/metrics-and-benchmarks.md):社媒指标口径与基准:ER 双口径(by followers/by reach,差 10 倍)、2025–26 分平台基准表(Rival IQ/Socialinsider 带源带口径)、信号 vs 虚荣指标、A/B 测试纪律、幸存者偏差与暴露混杂。纪律基线(数字必须代码算出/分母点名/n<30 不报率/因果措辞/方法附注模板)统一见 [analysis-foundation](../analysis-foundation/SKILL.md)——**所有本仓库 skill 共享该纪律层**。

@@ -57,3 +57,7 @@ Absent fields, rows, markets, currencies, costs, shipping, tax, ranks, and decis
 ### Recommendations
 
 A shortlist and tradeoffs that trace to observed values and the user's stated criteria, plus the next information needed. If criteria were missing, give a conditional shortlist and say which criteria would change it. Do not promise business results.
+
+## References
+
+- [references/weighted-scoring-and-pricing.md](references/weighted-scoring-and-pricing.md):选品与价格领域层:MCDA 加权评分四步+量纲陷阱+敏感性、三段价格分布模板、Keepa 式价格历史指标、变体分组挂 Google Product Taxonomy。纪律基线(数字必须代码算出/分母点名/n<30 不报率/因果措辞/方法附注模板)统一见 [analysis-foundation](../analysis-foundation/SKILL.md)——**所有本仓库 skill 共享该纪律层**。

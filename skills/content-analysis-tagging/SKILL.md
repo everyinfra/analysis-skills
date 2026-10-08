@@ -53,3 +53,7 @@ Always return a JSON object with `records` and `summary`.
 - `limitations`: sample limitations (required in `analyze` mode)
 
 In `tag` mode, `themes` may be an empty array. In `analyze` mode, `themes` summarize recurring themes and disagreements with source IDs and counts.
+
+## References
+
+- [references/taxonomy-quality.md](references/taxonomy-quality.md):Taxonomy 领域层:MECE 设计原则(每层≤15–20/其他兜底监控)、质量四指标(覆盖/分布/层间/双遍 kappa)、LLM 校准协议(gold set≥50/>80% 一致性/5–10% 抽检)。纪律基线(数字必须代码算出/分母点名/n<30 不报率/因果措辞/方法附注模板)统一见 [analysis-foundation](../analysis-foundation/SKILL.md)——**所有本仓库 skill 共享该纪律层**。

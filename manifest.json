@@ -1,8 +1,10 @@
 {
   "name": "EveryInfra Analysis Skills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Apache-2.0",
-  "maintainer": {"organization": "EveryInfra"},
+  "maintainer": {
+    "organization": "EveryInfra"
+  },
   "feedback_url": "https://github.com/everyinfra/analysis-skills/issues",
   "skills": [
     {
@@ -24,6 +26,10 @@
       "slug": "review-insights",
       "skill_path": "skills/review-insights/SKILL.md",
       "example_path": "examples/review-insights.synthetic.json"
+    },
+    {
+      "slug": "analysis-foundation",
+      "skill_path": "skills/analysis-foundation/SKILL.md"
     }
   ]
 }

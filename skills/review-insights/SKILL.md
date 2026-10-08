@@ -61,3 +61,7 @@ Unclassified review IDs with reasons, missing fields, null versus zero, selectio
 ### Actions to test
 
 Hypotheses with supporting review IDs, a check or test, and uncertainty. No promised outcomes.
+
+## References
+
+- [references/aspect-mining.md](references/aspect-mining.md):评论挖掘领域层:ABSA 四元组 schema(aspect/极性/严重度/引文必填)、三路线取舍(BERTopic 默认/LLM 原型/混合管线)、MNAR 偏差声明、评分-情感背离检测。纪律基线(数字必须代码算出/分母点名/n<30 不报率/因果措辞/方法附注模板)统一见 [analysis-foundation](../analysis-foundation/SKILL.md)——**所有本仓库 skill 共享该纪律层**。
