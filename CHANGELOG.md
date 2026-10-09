@@ -2,6 +2,11 @@
 
 Future content or contract changes must bump the package version and add a dated entry.
 
+## 0.4.0 - 2026-10-09
+
+- **New skill `spreadsheet-deliverable`**: xlsx delivery discipline absorbed from anthropics/skills (MIT) — formula-first cells (never hardcode results), recalculation gate with zero-error report before delivery, dual-pass reading model, LibreOffice compatibility list, input/formula/cross-sheet/fill color conventions, percentages stored as decimals, assumptions with source annotations; analysis-scenario patterns (weighted scorecard with sensitivity, comparison matrix with thresholds, trend+anomaly sheets).
+- **Gold-standard sample output** (`examples/gold-standard-review-insights.md`, synthetic data): demonstrates the seven-section deliverable standard — answer-style title, standalone "The answer", numbers with denominators, option table, "What could change this conclusion", method notes.
+
 ## 0.3.0 - 2026-10-09
 
 Adds a shared discipline layer and domain references, mined from high-star open-source analysis skills (each source linked in-file):

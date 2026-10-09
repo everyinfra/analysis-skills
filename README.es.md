@@ -4,7 +4,7 @@
 
 **Descarga gratuita. Usa tu propia herramienta de IA y tu propio modelo.**
 
-EveryInfra Analysis Skills es la versión `0.3.0`, con licencia Apache-2.0. El paquete se puede descargar e instalar de forma gratuita. Incluye **cinco** Skills de análisis: cuatro de dominio más una capa compartida de disciplina, **analysis-foundation**. No llama a un modelo, no incluye un proveedor de modelos y no requiere una clave de API ni dependencias en tiempo de ejecución. La herramienta de IA compatible del cliente proporciona el modelo y la cuota del modelo.
+EveryInfra Analysis Skills es la versión `0.3.0`, con licencia Apache-2.0. El paquete se puede descargar e instalar de forma gratuita. Incluye **seis** Skills de análisis: cuatro de dominio más una capa compartida de disciplina, **analysis-foundation**. No llama a un modelo, no incluye un proveedor de modelos y no requiere una clave de API ni dependencias en tiempo de ejecución. La herramienta de IA compatible del cliente proporciona el modelo y la cuota del modelo.
 
 Una llamada aparte a la API o MCP de recopilación de datos de EveryInfra puede generar cargos. La instalación gratuita de Skills no es una recopilación gratuita.
 
@@ -15,6 +15,7 @@ Una llamada aparte a la API o MCP de recopilación de datos de EveryInfra puede 
 | `ecommerce-product-analysis` | Candidatos de producto a partir de CSV/JSON proporcionados por el usuario o de resultados ya obtenidos. |
 | `social-content-performance` | Contenido social para una muestra y una ventana temporal indicadas, a partir de archivos proporcionados o de resultados ya obtenidos. |
 | `content-analysis-tagging` | Registros etiquetados con una taxonomía proporcionada por el usuario o acordada. |
+| `spreadsheet-deliverable` | Real .xlsx workbooks with formulas (recalc gate, color conventions, assumptions with sources) |
 | `analysis-foundation` | **Capa de disciplina compartida**: pipeline de cuatro pasos, números solo desde código, denominadores nombrados, sin tasas con n<30, incertidumbre, redacción causal, tabla de gráficos, notas de método, calibración de etiquetado LLM. |
 | `review-insights` | Problemas, elogios y patrones de calificación en reseñas de productos, apps, lugares o empresas, a partir de archivos proporcionados o de resultados ya obtenidos. |
 
