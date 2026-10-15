@@ -81,5 +81,5 @@ description: Shared analysis discipline layer for all EveryInfra analysis skills
 - 数值幻觉召回 25.7%:ACM 3805712.3809882(2026);多步分析失败:DABstep arXiv:2506.23719;因果措辞:CORR2CAUSE arXiv:2306.05836;误导图:arXiv:2508.09716
 - 统计纪律:BBC 统计报道指南、Pew 误差范围模式、MeasuringU 小样本指引、Journalist's Resource
 - 方法附注:REFORMS(reforms.cs.princeton.edu)、AAAI-26 可复现清单
-- 结构借鉴:anthropics/skills(xlsx 重算门禁/验证闭环)、tronghieu/agent-skills data-scientist 目录范式、gaasher/Agent-Loop-Skills(ledger/验证门)、retentioneering-tools(事故库)、fafa-ai-data-lab(口径溯源脚注)、TerryFYL(先诊断后分析)
+- 结构借鉴:tronghieu/agent-skills data-scientist 目录范式、gaasher/Agent-Loop-Skills(ledger/验证门)、retentioneering-tools(事故库)、fafa-ai-data-lab(口径溯源脚注)、TerryFYL(先诊断后分析)
 - 本文件由 EveryInfra 编写,仅收录要点与链接

@@ -4,7 +4,7 @@
 
 **免费下载，用你自己的 AI 工具和模型。**
 
-EveryInfra Analysis Skills 的版本为 `0.3.0`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附**六个**分析 Skill——四个领域 skill 加一个共享的 **analysis-foundation(分析纪律层)**。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额由客户的兼容 AI 工具提供。
+EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附**六个**分析 Skill——四个领域 skill 加一个共享的 **analysis-foundation(分析纪律层)**。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额由客户的兼容 AI 工具提供。
 
 单独的 EveryInfra 数据采集 API 或 MCP 调用可能产生费用。免费安装 Skill 并不等于免费采集。
 
@@ -15,7 +15,7 @@ EveryInfra Analysis Skills 的版本为 `0.3.0`，采用 Apache-2.0 许可协议
 | `ecommerce-product-analysis` | 产品候选，来自用户提供的 CSV/JSON 或已获取的结果。 |
 | `social-content-performance` | 指定样本和时间窗口内的社交内容表现分析，来自所提供的文件或已获取的结果。 |
 | `content-analysis-tagging` | 使用用户提供或已约定的分类体系标注的记录。 |
-| `spreadsheet-deliverable` | Real .xlsx workbooks with formulas (recalc gate, color conventions, assumptions with sources) |
+| `spreadsheet-deliverable` | Editable .xlsx workbooks with live formulas (inputs/calculations/outputs separated, recalculation and error scan, built-in checks, assumptions with sources) |
 | `analysis-foundation` | **共享纪律层**:四步流水、数字必须由代码算出、分母点名、n<30 不报率、不确定度、因果措辞、图表决策表、方法附注、LLM 打标校准。 |
 | `review-insights` | 商品、应用、门店或公司评价中的痛点、好评点和评分分布，来自所提供的文件或已获取的结果。 |
 

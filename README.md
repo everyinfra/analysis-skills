@@ -4,7 +4,7 @@
 
 **Free to download. Use your own AI tool and model.**
 
-EveryInfra Analysis Skills is version `0.3.0`, licensed under Apache-2.0. The package is free to download and install. It ships **six** analysis Skills — four domain skills plus a shared **analysis-foundation** discipline layer. It does not call a model, does not bundle a model provider, and has no API key or runtime dependency. The customer's compatible AI tool supplies the model and the model quota.
+EveryInfra Analysis Skills is version `0.4.1`, licensed under Apache-2.0. The package is free to download and install. It ships **six** analysis Skills — four domain skills plus a shared **analysis-foundation** discipline layer. It does not call a model, does not bundle a model provider, and has no API key or runtime dependency. The customer's compatible AI tool supplies the model and the model quota.
 
 A separate EveryInfra data-collection API or MCP call may cost money. Free Skill installation is not free collection.
 
@@ -16,7 +16,7 @@ A separate EveryInfra data-collection API or MCP call may cost money. Free Skill
 | `social-content-performance` | Social content for a stated sample and time window, from supplied files or results already fetched. |
 | `content-analysis-tagging` | Records labeled with a user-provided or agreed taxonomy. |
 | `review-insights` | Pain points, praise, and rating patterns in product, app, place, or company reviews, from supplied files or results already fetched. |
-| `spreadsheet-deliverable` | Real .xlsx workbooks with formulas (recalc gate, color conventions, assumptions with sources) |
+| `spreadsheet-deliverable` | Editable .xlsx workbooks with live formulas (inputs/calculations/outputs separated, recalculation and error scan, built-in checks, assumptions with sources) |
 | `analysis-foundation` | **Shared discipline layer**: four-step pipeline, numbers-from-code, denominator naming, n<30 no rates, uncertainty, causation wording, chart-choice table, method notes, LLM-labeling calibration. |
 
 Each Skill analyzes supplied files or already-fetched results. Installing a Skill does not collect data.

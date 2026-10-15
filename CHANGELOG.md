@@ -2,9 +2,15 @@
 
 Future content or contract changes must bump the package version and add a dated entry.
 
+## 0.4.1 - 2026-10-15
+
+- **License correction for `spreadsheet-deliverable`**: 0.4.0 credited the xlsx skill in anthropics/skills as MIT. That skill is source-available under Anthropic's own terms, which do not permit derivative works, so the credit was wrong. `spreadsheet-deliverable` has been rewritten from public guidance (ICAEW Financial Modelling Code, openpyxl documentation, Microsoft [MS-XLSX]); the anthropics/skills reference is removed from the skill, `analysis-foundation` and NOTICE.
+- NOTICE: each credited repository now lists the license it declares (checked 2026-10-15) instead of "(open)".
+- README version line corrected (it still said 0.3.0).
+
 ## 0.4.0 - 2026-10-09
 
-- **New skill `spreadsheet-deliverable`**: xlsx delivery discipline absorbed from anthropics/skills (MIT) — formula-first cells (never hardcode results), recalculation gate with zero-error report before delivery, dual-pass reading model, LibreOffice compatibility list, input/formula/cross-sheet/fill color conventions, percentages stored as decimals, assumptions with source annotations; analysis-scenario patterns (weighted scorecard with sensitivity, comparison matrix with thresholds, trend+anomaly sheets).
+- **New skill `spreadsheet-deliverable`**: xlsx delivery discipline — formula-first cells (never hardcode results), recalculation gate with zero-error report before delivery, dual-pass reading model, LibreOffice compatibility list, input/formula/cross-sheet/fill color conventions, percentages stored as decimals, assumptions with source annotations; analysis-scenario patterns (weighted scorecard with sensitivity, comparison matrix with thresholds, trend+anomaly sheets).
 - **Gold-standard sample output** (`examples/gold-standard-review-insights.md`, synthetic data): demonstrates the seven-section deliverable standard — answer-style title, standalone "The answer", numbers with denominators, option table, "What could change this conclusion", method notes.
 
 ## 0.3.0 - 2026-10-09
