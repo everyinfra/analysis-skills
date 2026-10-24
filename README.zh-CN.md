@@ -76,8 +76,8 @@ EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议
 
 | 宿主              | 安装目录               |
 |-------------------|-----------------------|
-| Codex CLI / IDE   | `~/.agents/skills/`   |
-| Claude Code       | `~/.claude/skills/`   |
+| <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE   | `~/.agents/skills/`   |
+| <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code       | `~/.claude/skills/`   |
 
 将以下一个或多个确切的 Skill 文件夹复制到 `~/.agents/skills/` 或 `~/.claude/skills/`：
 
@@ -89,13 +89,13 @@ EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议
 
 另外把 `skills/analysis-foundation` 一起复制：每个 Skill 都引用这个共享的分析纪律层。兼容宿主可以使用其文档中说明的 Skill 文件夹。
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
+<img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
+<img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 对于合成示例，只向模型提供 `source_response` 和 `task`；保留 `expected_output` 在模型输入之外以便之后比较。
 
-[Build skills — Codex](https://developers.openai.com/codex/build-skills) · [Extend Claude with skills](https://code.claude.com/docs/en/skills)
+[Build skills — <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex](https://developers.openai.com/codex/build-skills) · [Extend <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude with skills](https://code.claude.com/docs/en/skills)
 
 ## 合成示例
 

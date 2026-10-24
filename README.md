@@ -76,8 +76,8 @@ Or clone `https://github.com/everyinfra/analysis-skills.git`.
 
 | Host              | Install Directory       |
 |-------------------|-------------------------|
-| Codex CLI / IDE   | `~/.agents/skills/`     |
-| Claude Code       | `~/.claude/skills/`     |
+| <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE   | `~/.agents/skills/`     |
+| <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code       | `~/.claude/skills/`     |
 
 Copy one or more of these exact Skill folders into `~/.agents/skills/` or `~/.claude/skills/`:
 
@@ -89,13 +89,13 @@ Copy one or more of these exact Skill folders into `~/.agents/skills/` or `~/.cl
 
 Also copy `skills/analysis-foundation`: every Skill links to it as the shared discipline layer. Compatible hosts can use their own documented Skill folder.
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
+<img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
+<img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 For a synthetic example, give the model only `source_response` and `task`; retain `expected_output` outside the model input to compare afterward.
 
-[Build skills — Codex](https://developers.openai.com/codex/build-skills) · [Extend Claude with skills](https://code.claude.com/docs/en/skills)
+[Build skills — <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex](https://developers.openai.com/codex/build-skills) · [Extend <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude with skills](https://code.claude.com/docs/en/skills)
 
 ## Synthetic fixtures
 

@@ -76,8 +76,8 @@ O clona `https://github.com/everyinfra/analysis-skills.git`.
 
 | Host              | Directorio de instalación     |
 |-------------------|-------------------------------|
-| Codex CLI / IDE   | `~/.agents/skills/`           |
-| Claude Code       | `~/.claude/skills/`           |
+| <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE   | `~/.agents/skills/`           |
+| <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code       | `~/.claude/skills/`           |
 
 Copia una o más de estas carpetas de Skill exactas en `~/.agents/skills/` o `~/.claude/skills/`:
 
@@ -89,13 +89,13 @@ Copia una o más de estas carpetas de Skill exactas en `~/.agents/skills/` o `~/
 
 Copia también `skills/analysis-foundation`: todas las Skills la enlazan como capa compartida de disciplina. Los hosts compatibles pueden usar la carpeta de Skill indicada en su documentación.
 
-Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
+<img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
-Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
+<img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude Code: `/ecommerce-product-analysis` · `/social-content-performance` · `/content-analysis-tagging` · `/review-insights`
 
 Para un ejemplo sintético, proporciona al modelo solo `source_response` y `task`; mantén `expected_output` fuera de la entrada del modelo para compararlo después.
 
-[Build skills — Codex](https://developers.openai.com/codex/build-skills) · [Extend Claude with skills](https://code.claude.com/docs/en/skills)
+[Build skills — <img src="assets/icons/codex.svg" width="16" height="16" alt=""> Codex](https://developers.openai.com/codex/build-skills) · [Extend <img src="assets/icons/claude.svg" width="16" height="16" alt=""> Claude with skills](https://code.claude.com/docs/en/skills)
 
 ## Fixtures sintéticos
 
