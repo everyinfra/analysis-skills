@@ -1,10 +1,30 @@
 # EveryInfra Analysis Skills
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img alt="8 条合成评论按痛点和好评归类，每个占比都写明分母；样本均值和商品页评分并排，附一句说明。" src="assets/hero-light.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/everyinfra/analysis-skills/releases/latest"><img src="https://img.shields.io/badge/下载最新版本-2F363D?style=for-the-badge&logo=github&logoColor=white" alt="下载最新版本"></a>
+  <a href="https://github.com/everyinfra/analysis-skills/issues"><img src="https://img.shields.io/badge/提交_Issue-2F363D?style=for-the-badge&logo=github&logoColor=white" alt="提交 Issue"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.4.1-brightgreen" alt="version 0.4.1">
+  <img src="https://img.shields.io/badge/license-Apache--2.0-brightgreen" alt="Apache-2.0">
+  <img src="https://img.shields.io/badge/skills-6-brightgreen" alt="6 skills">
+  <img src="https://img.shields.io/badge/模型-用你自己的-brightgreen" alt="model">
+</p>
+
+<p align="center"><a href="README.md">English</a> · <b>简体中文</b> · <a href="README.es.md">Español</a></p>
 
 **免费下载，用你自己的 AI 工具和模型。**
 
-EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附**六个**分析 Skill——四个领域 skill 加一个共享的 **analysis-foundation(分析纪律层)**。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额由客户的兼容 AI 工具提供。
+EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议。本软件包可免费下载和安装。它随附**六个**分析 Skill——四个领域 skill 加一个共享的 **analysis-foundation(分析纪律层)**。它不调用模型，不捆绑模型提供商，也没有 API 密钥或运行时依赖。模型和模型配额来自客户自己的兼容 AI 工具。
 
 单独的 EveryInfra 数据采集 API 或 MCP 调用可能产生费用。免费安装 Skill 并不等于免费采集。
 
@@ -27,10 +47,10 @@ EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议
 
 | Skill | EveryData 能力示例 |
 | --- | --- |
-| `ecommerce-product-analysis` | `amazon/search`、`walmart/search`、`taobao/search`、`jd/search`、`shopee/search` |
+| `ecommerce-product-analysis` | `amazon/search`、`aliexpress/search`、`taobao/search`、`jd/search`、`shopee/search` |
 | `social-content-performance` | `tiktok/search`、`tiktok/user_videos`、`youtube/search`、`xiaohongshu/search`、`bilibili/search` |
 | `content-analysis-tagging` | 文本类记录，例如 `xiaohongshu/search`、`reddit/search`、`zhihu/search` 或各平台的 `comments` 结果 |
-| `review-insights` | `amazon/reviews`、`walmart/reviews`、`taobao/reviews`、`jd/reviews`、`app_store/reviews`、`google_maps_reviews/reviews` |
+| `review-insights` | `amazon/reviews`、`walmart/reviews`、`taobao/reviews`、`trustpilot/reviews`、`app_store/reviews`、`google_maps_reviews/reviews` |
 
 实时目录：`GET https://api.everyinfra.com/api/v1/social/catalog`。
 
@@ -65,8 +85,9 @@ EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议
 - `skills/social-content-performance`
 - `skills/content-analysis-tagging`
 - `skills/review-insights`
+- `skills/spreadsheet-deliverable`
 
-每个 Skill 文件夹均可独立安装。兼容宿主可以使用其文档中说明的 Skill 文件夹。
+另外把 `skills/analysis-foundation` 一起复制：每个 Skill 都引用这个共享的分析纪律层。兼容宿主可以使用其文档中说明的 Skill 文件夹。
 
 Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 

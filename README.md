@@ -1,6 +1,26 @@
 # EveryInfra Analysis Skills
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img alt="Eight synthetic reviews are grouped into pain points and praise, each share written with its denominator, and the sample mean is set against the listing rating with a note." src="assets/hero-light.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/everyinfra/analysis-skills/releases/latest"><img src="https://img.shields.io/badge/Download_latest_release-2F363D?style=for-the-badge&logo=github&logoColor=white" alt="Download the latest release"></a>
+  <a href="https://github.com/everyinfra/analysis-skills/issues"><img src="https://img.shields.io/badge/Report_an_issue-2F363D?style=for-the-badge&logo=github&logoColor=white" alt="Report an issue"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.4.1-brightgreen" alt="version 0.4.1">
+  <img src="https://img.shields.io/badge/license-Apache--2.0-brightgreen" alt="Apache-2.0">
+  <img src="https://img.shields.io/badge/skills-6-brightgreen" alt="6 skills">
+  <img src="https://img.shields.io/badge/model-your_own-brightgreen" alt="model">
+</p>
+
+<p align="center"><b>English</b> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.es.md">Español</a></p>
 
 **Free to download. Use your own AI tool and model.**
 
@@ -27,10 +47,10 @@ Each Skill also works on results you already fetched from EveryInfra. Examples o
 
 | Skill | Example EveryData actions |
 | --- | --- |
-| `ecommerce-product-analysis` | `amazon/search`, `walmart/search`, `taobao/search`, `jd/search`, `shopee/search` |
+| `ecommerce-product-analysis` | `amazon/search`, `aliexpress/search`, `taobao/search`, `jd/search`, `shopee/search` |
 | `social-content-performance` | `tiktok/search`, `tiktok/user_videos`, `youtube/search`, `xiaohongshu/search`, `bilibili/search` |
 | `content-analysis-tagging` | Text records such as `xiaohongshu/search`, `reddit/search`, `zhihu/search`, or `comments` results |
-| `review-insights` | `amazon/reviews`, `walmart/reviews`, `taobao/reviews`, `jd/reviews`, `app_store/reviews`, `google_maps_reviews/reviews` |
+| `review-insights` | `amazon/reviews`, `walmart/reviews`, `taobao/reviews`, `trustpilot/reviews`, `app_store/reviews`, `google_maps_reviews/reviews` |
 
 Live catalog: `GET https://api.everyinfra.com/api/v1/social/catalog`.
 
@@ -65,8 +85,9 @@ Copy one or more of these exact Skill folders into `~/.agents/skills/` or `~/.cl
 - `skills/social-content-performance`
 - `skills/content-analysis-tagging`
 - `skills/review-insights`
+- `skills/spreadsheet-deliverable`
 
-Each Skill folder is independently installable. Compatible hosts can use their own documented Skill folder.
+Also copy `skills/analysis-foundation`: every Skill links to it as the shared discipline layer. Compatible hosts can use their own documented Skill folder.
 
 Codex CLI / IDE: `$ecommerce-product-analysis` · `$social-content-performance` · `$content-analysis-tagging` · `$review-insights`
 
