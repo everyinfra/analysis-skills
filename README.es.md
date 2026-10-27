@@ -1,5 +1,8 @@
 # EveryInfra Analysis Skills
 
+<!-- rq223-banner -->
+<p align="center"><img alt="EveryInfra Analysis Skills — Skills de análisis: cifras calculadas con código, denominador explícito e incertidumbre declarada" src="assets/banner-es.jpg" width="100%"></p>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">

@@ -1,5 +1,8 @@
 # EveryInfra Analysis Skills
 
+<!-- rq223-banner -->
+<p align="center"><img alt="EveryInfra Analysis Skills：数字用代码算、分母写明、不确定性照报的分析技能" src="assets/banner-zh.jpg" width="100%"></p>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
