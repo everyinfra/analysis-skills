@@ -128,6 +128,10 @@ Update triggers: public API contract or schema changes, a verified correction to
 
 Feedback channel: public GitHub Issues at [https://github.com/everyinfra/analysis-skills/issues](https://github.com/everyinfra/analysis-skills/issues). Do not post API keys, credentials, private customer records, or other confidential data.
 
+## Build these Skills with us
+
+These Skills get better when the people who analyse data every day add what they know. Propose a Skill, report a wrong result, improve an example or send a whole new Skill: see [CONTRIBUTING.md](CONTRIBUTING.md). Maintainers review every contribution by hand, and contributors are credited in [CONTRIBUTORS.md](CONTRIBUTORS.md). Ideas and questions go to [Discussions](https://github.com/everyinfra/analysis-skills/discussions).
+
 ## License
 
 Apache-2.0. See `LICENSE`.

@@ -1,0 +1,25 @@
+name: Improve an existing Skill · 改进现有 Skill
+description: A better step, check, example or wording · 更好的步骤、检查、示例或说法
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which Skill · 哪个 Skill
+      options: [ecommerce-product-analysis, social-content-performance, content-analysis-tagging, review-insights, analysis-foundation, spreadsheet-deliverable, other · 其他]
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What to change, and why · 改什么、为什么
+      description: If it comes from your own practice or a source, say which · 来自你的实践或某个出处的话，写一下
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Do you want to send the change? · 你想自己提改动吗？
+      options:
+        - Yes, I'll send a pull request · 我来提 PR
+        - Please make the change · 请维护者来改

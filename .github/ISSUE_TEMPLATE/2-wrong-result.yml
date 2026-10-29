@@ -1,0 +1,34 @@
+name: Wrong or misleading result · 结果不对
+description: A Skill gave numbers or conclusions that were wrong · 某个 Skill 给出的数字或结论不对
+labels: [bug]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which Skill · 哪个 Skill
+      options: [ecommerce-product-analysis, social-content-performance, content-analysis-tagging, review-insights, analysis-foundation, spreadsheet-deliverable, other · 其他]
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: AI tool and model · AI 工具和模型
+      placeholder: e.g. Claude Code + Claude Sonnet, Codex + GPT
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected · 发生了什么，你预期的是什么
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample input · 样例输入
+      description: A few synthetic or anonymised rows that reproduce it · 能复现问题的几行编造或脱敏数据
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Safety · 安全
+      options:
+        - label: I removed API keys, credentials and real personal or customer data · 已去掉 API Key、凭据和真实个人或客户数据
+          required: true

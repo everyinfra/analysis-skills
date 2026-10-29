@@ -128,6 +128,10 @@ EveryInfra Analysis Skills 的版本为 `0.4.1`，采用 Apache-2.0 许可协议
 
 反馈渠道：公开 GitHub Issues，地址为 [https://github.com/everyinfra/analysis-skills/issues](https://github.com/everyinfra/analysis-skills/issues)。请勿发布 API 密钥、凭据、客户私有记录或其他机密数据。
 
+## 一起共创
+
+每天和数据打交道的人把自己的方法加进来，这些 Skill 才会越来越好。提议新 Skill、报告结果不对、改进示例，或者提交一个完整的新 Skill，都看[共创指南](CONTRIBUTING.zh-CN.md)。每份贡献都由维护者手动审核，贡献者署名在 [CONTRIBUTORS.md](CONTRIBUTORS.md)。想法和提问到 [Discussions](https://github.com/everyinfra/analysis-skills/discussions)。
+
 ## 许可协议
 
 Apache-2.0。参见 `LICENSE`。

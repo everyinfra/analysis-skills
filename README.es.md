@@ -128,6 +128,10 @@ Disparadores de actualización: cambios en el contrato o schema de la API públi
 
 Canal de comentarios: GitHub Issues público en [https://github.com/everyinfra/analysis-skills/issues](https://github.com/everyinfra/analysis-skills/issues). No publiques claves de API, credenciales, registros privados de clientes u otros datos confidenciales.
 
+## Construye estas Skills con nosotros
+
+Estas Skills mejoran cuando quienes analizan datos a diario aportan lo que saben. Propón una Skill, informa de un resultado incorrecto, mejora un ejemplo o envía una Skill nueva: consulta [CONTRIBUTING.md](CONTRIBUTING.md). Los mantenedores revisan cada contribución a mano y la acreditan en [CONTRIBUTORS.md](CONTRIBUTORS.md). Ideas y preguntas en [Discussions](https://github.com/everyinfra/analysis-skills/discussions).
+
 ## Licencia
 
 Apache-2.0. Véase `LICENSE`.

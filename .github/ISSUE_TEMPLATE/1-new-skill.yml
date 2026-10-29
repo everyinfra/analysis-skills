@@ -1,0 +1,33 @@
+name: Propose a new Skill · 提议新 Skill
+description: An analysis you do often that deserves its own Skill · 你常做、值得单独做成 Skill 的分析
+labels: [enhancement]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: What analysis is it? · 是什么分析？
+      description: Who needs it and what decision it helps make · 谁需要、帮他做什么决定
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input data · 输入数据
+      description: Which platform or source, which fields · 来自哪个平台或来源、有哪些字段
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What a good result looks like · 好的结果长什么样
+      description: Tables, numbers, recommendations. A short made-up example helps a lot · 表、数字、建议；附一个编造的小例子最好
+  - type: dropdown
+    id: build
+    attributes:
+      label: Do you want to build it? · 你想自己做吗？
+      options:
+        - I'd like to build it · 我想自己做
+        - I'd like to build it with help · 想做，但需要帮忙
+        - Just an idea for now · 先提个想法
+    validations:
+      required: true
